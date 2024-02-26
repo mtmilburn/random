@@ -29,10 +29,17 @@ if (facts.length > 0) {
   return (
   <>
   <h1 className="text-6xl text-center">Bet you didn't know...🧐</h1>
-  <div className="w-4/5 mt-10 mx-auto xl:columns-4 lg:columns-3 md:columns-2">
- 
-  {facts.length > 0 && <Details fact={facts[15]} />}
-        </div>
+  
+        <Routes>
+        <Route path="/" element={
+          <HomePage  
+          refreshQueue={getData}
+
+          updateDetails={setDetailsData}
+          />}
+          />
+          <Route path="/details/" element={<Details fact={detailsData} />} />
+      </Routes>
   </>
   )
 } else {
@@ -49,7 +56,7 @@ if (facts.length > 0) {
           updateDetails={setDetailsData}
           />}
           />
-          <Route path="/DetailsPage/" element={<Details fact={detailsData} />} />
+          <Route path="/details/" element={<Details fact={detailsData} />} />
       </Routes>
       </>
           )

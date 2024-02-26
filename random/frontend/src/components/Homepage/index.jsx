@@ -5,6 +5,7 @@ export default function HomePage({refreshQueue, updateDetails}){
 const api_key = import.meta.env.VITE_API_NINJA_KEY
 const [facts, setFacts] = useState([])
 
+
 async function getData(url) 
     {
         setFacts([])
@@ -25,6 +26,7 @@ async function getData(url)
 
 useEffect(()=>
 {
+    console.log('hello')
         setFacts([])
         getData('https://api.api-ninjas.com/v1/facts?limit=15')
     
@@ -33,7 +35,10 @@ useEffect(()=>
 )
 return (
     <>
-        <h1 className="mt-5 text-center md:text-3xl text-2xl font-bold">Welcome to </h1>
+        <div className="flex justify-center items-center">
+        <img src="https://media.tenor.com/GX4d4avOLjAAAAAM/fafo-holdmybeer.gif" alt="You Gone Learn Today!" />
+       
+</div>
 
         <Gallery 
         facts={facts}
