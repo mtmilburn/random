@@ -1,7 +1,5 @@
 import './styles.css'
 import { useState, useEffect } from 'react'
-import Card from '../Card'
-import Gallery from '../Gallery'
 import Details from '../DetailsPage'
 import NotFoundPage from '../NotFoundPage'
 import { Route, Routes, Link} from "react-router-dom";
@@ -54,18 +52,13 @@ if (loginStatus) {
 if (facts.length > 0) {
   return (
   <>
-  <h1 className="text-6xl text-center">Bet you didn't know...🧐</h1>
-  <nav className="flex items-center justify-between h-16 bg-gray-800 shadow-lg lg:px-9 md:px-6 px-3">
+  <h1 className="text-6xl text-center text-blue-950">Bet you didn't know...🧐</h1>
+  <nav className="flex items-center justify-between h-16 bg-gray-800 shadow-lg lg:px-9 md:px-6 px-3 border-2 border-[#fcd34d]">
     <Link to="/">
         <h1 className="text-yellow-300 font-bold md:text-3xl sm:text-2xl">Home</h1>
     </Link>
     <div className="flex lg:gap-5 md:gap-4 sm:gap-3 gap-2">
-    	<Link to="/auth/signup">
-            <h2 className="text-yellow-300 md:text-lg sm:text-md">Sign Up</h2>
-	</Link>
-	<Link to="/auth/login">
-	    <h2 className="text-yellow-300 md:text-lg sm:text-md">Log In</h2>
-	</Link>
+    {authLink}
     </div>
 </nav>
 
@@ -77,14 +70,16 @@ if (facts.length > 0) {
           updateDetails={setDetailsData}
           />}
           />
-          <Route path="/details/" element={<Details fact={detailsData} />} />
+          <Route path="/auth/:formType" element={<AuthFormPage />}></Route>
+          <Route path="/details/:id" element={<Details fact={detailsData} />} />
+          <Route path="/*" element={<NotFoundPage />} />
       </Routes>
   </>
   )
 } else {
   return(
     <>
-    <h1 className="text-6xl text-center">Bet you didn't know...🤔</h1>
+    <h1 className="text-6xl text-center text-blue-950">Bet you didn't know...🤔</h1>
     <p>wait for it..wait for it</p>
     
   <Routes>
@@ -95,8 +90,9 @@ if (facts.length > 0) {
           updateDetails={setDetailsData}
           />}
           />
-          <Route path="/auth/:formType" element={<AuthFormPage />} />
+          <Route path="/auth/:formType" element={<AuthFormPage setLoginStatus={setLoginStatus} />} />
           <Route path="/details/" element={<Details fact={detailsData} />} />
+          <Route path="/*" element={<NotFoundPage />} />
       </Routes>
       </>
           )

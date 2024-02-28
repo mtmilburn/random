@@ -26,9 +26,9 @@ async function getData(url)
 
 useEffect(()=>
 {
-    console.log('hello')
+    
         setFacts([])
-        getData('https://api.api-ninjas.com/v1/facts?limit=15')
+        getData('https://api.api-ninjas.com/v1/facts?limit=30')
     
 },[]
 

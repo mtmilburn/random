@@ -46,7 +46,7 @@ const authMiddleware = (req, res, next) => {
 ---------------------------------------------------------- */
 // Index Route (GET/Read): Will display all comments
 router.get('/:fact', function (req, res) {
-    db.Comment.find({ fact: req.params.fact })
+    db.Comment.find({ factId: req.params.fact })
         .then(comments => res.json(comments))
 })
 

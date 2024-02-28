@@ -2,7 +2,7 @@ import { useState, useEffect } from "react"
 import { postComment, getComments } from "../../../utils/backend"
 import Comment from "../Comment"
 
-export default function commentSection({ artworkId }) {
+export default function commentSection({ factId }) {
     // Save comments queried from the database in state
     const [comments, setComments] = useState([])
     const [showCreateForm, setShowCreateForm] = useState(false)
@@ -13,11 +13,11 @@ export default function commentSection({ artworkId }) {
 
     // Query the database for all comments that pertain to this artwork on component mount
     useEffect(() => {
-        getComments(artworkId)
+        getComments(factId)
             .then(comments => setComments(comments))
     }, [])
 
-
+console.log(factId)
     // Update the form fields as the user types
     function handleInputChange(event) {
         setCreateFormData({
@@ -33,7 +33,7 @@ export default function commentSection({ artworkId }) {
 
     // Update the comments in the comment section after a database transaction
     function refreshComments() {
-        getComments(artworkId)
+        getComments(factId)
             .then(newCommentData => setComments(newCommentData))
     }
 
@@ -49,7 +49,7 @@ export default function commentSection({ artworkId }) {
         // close the form
         setShowCreateForm(false)
         // create the comment in the backend
-        postComment({ ...createFormData, artworkId: artworkId })
+        postComment({ ...createFormData, factId: factId })
             .then(() => refreshComments())
     }
 
