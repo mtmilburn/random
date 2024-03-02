@@ -5,13 +5,15 @@ import NotFoundPage from '../NotFoundPage'
 import { Route, Routes, Link} from "react-router-dom";
 import HomePage from '../Homepage'
 import AuthFormPage from '../AuthFormPage'
+import { getFavorites } from '../../../utils/backend';
+import FavoritesPage from '../FavoritesPage';
 
 
 export default function App() {
   const [detailsData, setDetailsData] = useState({})
   const [facts, setFacts] = useState([])
   const [loginStatus, setLoginStatus] = useState(false)
-  
+  const [favFacts, setFavFacts] = useState([])
   // Define an async function to JSONify the query response  
   async function getData(url) {
     const res = await fetch(url)
@@ -28,6 +30,16 @@ export default function App() {
   }
   }, [])
 
+  //side effects for setting favorites
+  useEffect(()=>{
+    if (loginStatus){
+      getFavorites().then(data => setFavFacts(data))
+    } else {
+      setFavFacts([])
+    }
+  }, [loginStatus])
+
+
   // Constionally render the login/singup links and the logout button
   let authLink = <div className="flex lg:gap-5 md:gap-4 sm:gap-3 gap-2">
   <Link to="/auth/signup">
@@ -39,7 +51,11 @@ export default function App() {
 </div>
 
 if (loginStatus) {
-  authLink = <button
+  authLink = <div className="flex lg:gap-5 md:gap-4 sm:gap-3 gap-2">
+  <Link to="/favorites">
+      <h2 className="text-white md:text-lg sm:text-md">Favorites</h2>
+  </Link>
+  <button
       className="text-white md:text-lg sm:text-md"
       onClick={() => {
           localStorage.clear()
@@ -47,6 +63,7 @@ if (loginStatus) {
       }}>
       Log Out
   </button>
+  </div>
 }
 
 if (facts.length > 0) {
@@ -66,7 +83,16 @@ if (facts.length > 0) {
         <Route path="/" element={
           <HomePage  
           refreshQueue={getData}
-
+          favFacts={favFacts}
+          setFavFacts={setFavFacts}
+          updateDetails={setDetailsData}
+          />}
+          />
+        <Route path="/favorites" element={
+          <FavoritesPage  
+          loginStatus={loginStatus}
+          favFacts={favFacts}
+          setFavFacts={setFavFacts}
           updateDetails={setDetailsData}
           />}
           />
@@ -83,10 +109,19 @@ if (facts.length > 0) {
     <p>wait for it..wait for it</p>
     
   <Routes>
-        <Route path="/" element={
+  <Route path="/" element={
           <HomePage  
           refreshQueue={getData}
-
+          favFacts={favFacts}
+          setFavFacts={setFavFacts}
+          updateDetails={setDetailsData}
+          />}
+          />
+        <Route path="/favorites" element={
+          <FavoritesPage  
+          loginStatus={loginStatus}
+          favFacts={favFacts}
+          setFavFacts={setFavFacts}
           updateDetails={setDetailsData}
           />}
           />

@@ -15,7 +15,7 @@ const db = require('./models');
 --------------------------------------------------------------- */
 const commentsCtrl = require('./controllers/comments')
 const usersCtrl = require('./controllers/users')
-
+const favoritesCtrl = require('./controllers/favorites')
 /* Create the Express app
 ---------------------------------------------------------- */
 const app = express();
@@ -40,6 +40,9 @@ app.use('/api/comments', commentsCtrl)
 // to handle all routes that begin with `localhost:3000/api/users`
 app.use('/api/users', usersCtrl)
 
+// This tells our app to look at the `controllers/users.js` file 
+// to handle all routes that begin with `localhost:3000/api/favorites`
+app.use('/api/favorites', favoritesCtrl)
 
 /* Tell the app to listen on the specified port
 ---------------------------------------------------------- */

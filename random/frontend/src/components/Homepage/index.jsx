@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import Gallery from "../Gallery"
 
-export default function HomePage({refreshQueue, updateDetails}){
+export default function HomePage({refreshQueue, updateDetails, favFacts, setFavFacts}){
 const api_key = import.meta.env.VITE_API_NINJA_KEY
 const [facts, setFacts] = useState([])
 
@@ -44,7 +44,10 @@ return (
         facts={facts}
         updateDetails={updateDetails}
         refreshQueue = {refreshQueue} 
-        setFacts = {setFacts}/>
+        setFacts = {setFacts}
+        favFacts={favFacts}
+        setFavFacts={setFavFacts}
+        />
     </>
 )
 }

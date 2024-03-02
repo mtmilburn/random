@@ -40,3 +40,21 @@ export async function deleteComment(id) {
     const { data } = await axios.delete(`/api/comments/${id}`, authHeader)
     return data
 }
+
+export async function getFavorites() {
+    const authHeader = { headers: { 'Authorization': localStorage.getItem('userToken') } }
+    const { data } = await axios.get(`/api/favorites`, authHeader)
+    return data
+}
+
+export async function postFavorite(favorite) {
+    const authHeader = { headers: { 'Authorization': localStorage.getItem('userToken') } }
+    const { data } = await axios.post('/api/favorites', favorite, authHeader)
+    return data
+}
+
+export async function deleteFavorite(id) {
+    const authHeader = { headers: { 'Authorization': localStorage.getItem('userToken') } }
+    const { data } = await axios.delete(`/api/favorites/${id}`, authHeader)
+    return data
+}
