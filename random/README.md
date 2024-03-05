@@ -76,7 +76,7 @@ Main Routing Table
 | /favorites               | N/A        | GET         | N/A            | Brings the user to favorites page                                     |
 
 
-ROUTE TABLE (MongoDB (USERS))
+ROUTE TABLE (MongoDB)
 ----------------------
 
 | URI                                       | Rest Route | HTTP Method | Crud Action    | Description                                             |
