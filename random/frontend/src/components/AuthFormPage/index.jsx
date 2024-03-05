@@ -4,6 +4,7 @@ import { signUp, logIn } from "../../../utils/backend"
 
 
 export default function AuthFormPage() {
+    
     const [formData, setFormData] = useState({
         email: "",
         password: "",

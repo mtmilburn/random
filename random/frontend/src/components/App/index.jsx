@@ -14,13 +14,14 @@ export default function App() {
   const [facts, setFacts] = useState([])
   const [loginStatus, setLoginStatus] = useState(false)
   const [favFacts, setFavFacts] = useState([])
+  const pathName = window.location.pathname;
   // Define an async function to JSONify the query response  
   async function getData(url) {
     const res = await fetch(url)
     const { data } = await res.json()
     setFacts(facts.concat(data))
   }
-  
+
   // Call the async function
   useEffect(() => {
     getData('https://api.api-ninjas.com/v1/facts?limit=15')
@@ -28,7 +29,7 @@ export default function App() {
   if (localStorage.getItem('userToken')) {
     setLoginStatus(true)
   }
-  }, [])
+  }, [pathName, []])
 
   //side effects for setting favorites
   useEffect(()=>{
