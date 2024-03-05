@@ -6,7 +6,7 @@ As a user I would like to be able to 'save' or 'favorite' my favorite facts.
 As a user I would like to leave a comment on any fact.
 As a user I would like to have a log in or account.
 
-### :camera_flash: Screenshots 
+### Screenshots 
 
   |   Description | Screenshot | 
   |:-------------:| -----------|
@@ -28,7 +28,7 @@ I will add a random image/gif generator for the details page.
 
 Lastly I will most likely install a search feature for the content of the material.
 
-### Technologies used
+### Technologies Used
 ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
 ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
 ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
