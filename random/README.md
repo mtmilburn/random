@@ -1,12 +1,9 @@
-# Bet You Didn't Know..
+# [Did you know...](https://didyouknow-e674820a780f.herokuapp.com/)
 
-### User Stories
-As a user I would like to be able to click and see random facts.
-As a user I would like to be able to 'save' or 'favorite' my favorite facts.
-As a user I would like to leave a comment on any fact.
-As a user I would like to have a log in or account.
 
-### Screenshots 
+
+
+## Screenshots 
 
   |   Description | Screenshot | 
   |:-------------:| -----------|
@@ -16,19 +13,29 @@ As a user I would like to have a log in or account.
   | <h3>Sign up</h3> | <img src="https://i.imgur.com/fCcLd0M.png" width="700"> |
   | <h3>Log in</h3> | <img src="https://i.imgur.com/SahQLbK.png" width="700"> |
   
-### Unsolved Problems
+## Unsolved Problems
 
 None at the moment
 
 
-### Next Steps
+## Next Steps
 I'm going to incorporate multiple API's.
 
 I will add a random image/gif generator for the details page.
 
 Lastly I will most likely install a search feature for the content of the material.
 
-### Technologies Used
+## User Stories
+As a user I would like to be able to click and see random facts.
+
+As a user I would like to be able to 'save' or 'favorite' my favorite facts.
+
+As a user I would like to leave a comment on any fact.
+
+As a user I would like to have a log in or account.
+
+
+## Technologies Used
 ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
 ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
 ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
@@ -43,8 +50,9 @@ Lastly I will most likely install a search feature for the content of the materi
 ![Nodemon](https://img.shields.io/badge/NODEMON-%23323330.svg?style=for-the-badge&logo=nodemon&logoColor=%BBDEAD)
 ![JWT](https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=JSON%20web%20tokens)
 ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 
-### Wireframes
+## Wireframes
 
 ![Home Page](https://i.imgur.com/VEpz2Nf.png)
 
@@ -56,4 +64,17 @@ Lastly I will most likely install a search feature for the content of the materi
 
 ### Routing Table
 
-### Installation Instructions
+### Installation Instructions:
+
+1.Make a directory for app, then invoke vite via the following code(replace my-new-app with the name you desire)
+
+```
+npm create vite@latest my-new-app -- --template react
+```
+2.Now in the console initiate tailwind these [instructions](https://tailwindcss.com/docs/guides/vite)
+
+3.After this is complete create the file structure to your liking
+
+4.In the console execute 'npm run dev'
+
+5.Afterward feel free to build as you like. The API I used was [API ninjas](https://api-ninjas.com/), this API requires a key.

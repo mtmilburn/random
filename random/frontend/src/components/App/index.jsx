@@ -69,7 +69,7 @@ if (loginStatus) {
 if (facts.length > 0) {
   return (
   <>
-  <h1 className="text-6xl text-center text-blue-950">Bet you didn't know...🧐</h1>
+  <h1 className="text-6xl text-center text-blue-950">Did you know...🧐</h1>
   <nav className="flex items-center justify-between h-16 bg-gray-800 shadow-lg lg:px-9 md:px-6 px-3 border-2 border-[#fcd34d]">
     <Link to="/">
         <h1 className="text-yellow-300 font-bold md:text-3xl sm:text-2xl">Home</h1>
@@ -105,7 +105,7 @@ if (facts.length > 0) {
 } else {
   return(
     <>
-    <h1 className="text-6xl text-center text-blue-950">Bet you didn't know...🤔</h1>
+    <h1 className="text-6xl text-center text-blue-950">Did you know...🤔</h1>
     <p>wait for it..wait for it</p>
     
   <Routes>
