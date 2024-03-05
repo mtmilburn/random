@@ -62,7 +62,36 @@ As a user I would like to have a log in or account.
 
 ![Details Page](https://i.imgur.com/98tFzev.png)
 
-### Routing Table
+### Routing Tables
+
+Main Routing Table
+----------------------
+
+| URI                      | Rest Route | HTTP Method | Crud Action    | Description                                                           |
+| ------------------------ | ---------- | ----------- | -------------- | --------------------------------------------------------------------- |
+| /                        | N/A        | GET         | N/A            | Brings the user to the Homepage                                       |
+| /auth/login              | N/A        | GET         | N/A            | Brings the user to the login page                                     |
+| /auth/signup             | N/A        | GET         | N/A            | Brings the user to the signup page                                    |
+| /details/:facts          | N/A        | GET         | N/A            | Brings the user to the individual fact page                           |
+| /favorites               | N/A        | GET         | N/A            | Brings the user to favorites page                                     |
+
+
+ROUTE TABLE (MongoDB (USERS))
+----------------------
+
+| URI                                       | Rest Route | HTTP Method | Crud Action    | Description                                             |
+| ----------------------------------------- | ---------- | ----------- | -------------- |-------------------------------------------------------- |
+| /mongo/users/login/:user                  | N/A        | GET         | Read           | Gets the corresponding user profile                     |
+| /mongo/users/signup/:user                 | N/A        | GET         | Create         | Creates the user profile within the mongo database      |
+| /mongo/users/finduser/:email              | N/A        | GET         | Read           | Finds the active user within the database               |
+| /mongo/favorites/users/:userId?AuthHeader | N/A        | GET         | Read           | Gets all favorite facts created under active username   |
+| /mongo/favorites/users/:userId?AuthHeader | N/A        | POST        | Create         | Creates a favorite fact under active username           |
+| /mongo/favorites/users/:userId?AuthHeader | N/A        | DESTROY     | Delete         | Deletes a favorite fact under active username           |
+| /mongo/comments/:fact                     | N/A        | GET         | Read           | Gets all comments                                       |
+| /mongo/comments/:commentId?AuthHeader     | Create     | POST        | Create         | Creates a comment within the mongo db                   |
+| /mongo/comments/:commentId?AuthHeader     | Update     | PUT         | Update         | Will update a specific comment in the mongo db          |
+| /mongo/comments/:commentId?AuthHeader     | Delete     | DESTROY     | Delete         | Will delete a specific comment in the mongo db          |
+
 
 ### Installation Instructions:
 
