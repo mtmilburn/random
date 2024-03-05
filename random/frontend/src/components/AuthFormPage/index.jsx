@@ -17,7 +17,7 @@ export default function AuthFormPage() {
         setFormData({ ...formData, [event.target.name]: event.target.value });
     };
 
-    // Execute auth logic on form submit
+    
 async function handleSubmit(event) {
     // prevent the page from refreshing when the form is submitted
     event.preventDefault()
@@ -39,18 +39,18 @@ async function handleSubmit(event) {
 
     return (
         <div className="flex items-center justify-center h-[90vh]">
-            <div className="bg-gray-800 rounded-lg shadow-xl p-8 w-full max-w-md">
+            <div className="bg-blue-950 shadow-xl p-8 w-full max-w-md">
             <h2 className="text-3xl text-center font-bold text-gray-100 mb-8">
                 {actionText} 
                 </h2>
 
                 <form className="space-y-6" onSubmit={handleSubmit}>
                     <div>
-                        <label className="block text-gray-100 font-bold mb-2" htmlFor="email">
+                        <label className="block text-yellow-300 font-bold mb-2" htmlFor="email">
                             Email
                         </label>
                         <input
-                            className="w-full p-2 text-gray-900 rounded-md focus:outline-none focus:ring focus:border-blue-600"
+                            className="w-full p-2 text-gray-900 focus:outline-none focus:ring focus:border-blue-600"
                             id="email"
                             name="email"
                             type="email"
@@ -61,11 +61,11 @@ async function handleSubmit(event) {
                         />
                     </div>
                     <div>
-                        <label className="block text-gray-100 font-bold mb-2" htmlFor="password">
+                        <label className="block text-yellow-300 font-bold mb-2" htmlFor="password">
                             Password
                         </label>
                         <input
-                            className="w-full p-2 text-gray-900 rounded-md focus:outline-none focus:ring focus:border-blue-600"
+                            className="w-full p-2 text-gray-900  focus:outline-none focus:ring focus:border-blue-600"
                             id="password"
                             name="password"
                             type="password"
@@ -78,7 +78,7 @@ async function handleSubmit(event) {
                     </div>
                     <div>
                     <button type="submit"
-                    className="w-full py-2 px-4 bg-green-700 text-gray-100 rounded-md hover:bg-green-800 transition duration-300">
+                    className="w-full py-2 px-4 bg-yellow-300 text-black hover:bg-yellow-500 transition duration-300">
                     {actionText}
                     </button>
 

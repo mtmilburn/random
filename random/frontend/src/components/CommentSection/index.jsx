@@ -73,11 +73,11 @@ console.log(factId)
     }
 
     return (
-        <div className='comment-section bg-gray-300 rounded-t-lg p-4 pb-10 mt-4 mx-10 space-y-4 relative'>
+        <div className='comment-section bg-cyan-100 p-4 pb-10 mt-4 mx-10 space-y-4 relative'>
             <h1 className='text-xl font-bold'>Viewer Insights</h1>
             <button
                 onClick={toggleCreateForm}
-                className="top-0 right-5 absolute text-white hover:bg-green-800 font-bold py-2 px-4 bg-green-900 rounded cursor-pointer mr-2"
+                className="top-0 right-5 absolute text-white hover:bg-blue-700 font-bold py-2 px-4 bg-cyan-950 rounded cursor-pointer mr-2"
             >
                 {btnText}
             </button>
@@ -86,10 +86,10 @@ console.log(factId)
             {
                 showCreateForm && <form
                     onSubmit={handleSubmit}
-                    className="bg-gray-100 rounded-lg p-4 my-4 border-gray-700 border-2 w-[80vw] mx-auto text-right">
+                    className="bg-white rounded-lg p-4 my-4 border-gray-700 border-2 w-[80vw] mx-auto text-right">
                     <input
                         name="name"
-                        className="px-2 py-1 w-full bg-gray-100"
+                        className="px-2 py-1 w-full hover:bg-blue-100"
                         placeholder="Your name"
                         value={createFormData.name}
                         onChange={handleInputChange}
@@ -97,7 +97,7 @@ console.log(factId)
                     <br />
                     <textarea
                         name="content"
-                        className="p-2 my-2 h-[100px] w-full bg-gray-100"
+                        className="p-2 my-2 h-[100px] w-full hover:bg-blue-100"
                         placeholder="Share your thoughts!"
                         value={createFormData.content}
                         onChange={handleInputChange}

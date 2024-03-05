@@ -38,7 +38,7 @@ export default function Comment({ data, refreshComments }) {
         return (
             <form
                 onSubmit={handleSubmit}
-                className="bg-gray-100 rounded-lg p-4 my-4 border-gray-700 border-2 w-[80vw] mx-auto text-right">
+                className="bg-gray-100 p-4 my-4 border-gray-700 border-2 w-[80vw] mx-auto text-right">
                 <input
                     name="name"
                     className="px-2 py-1 w-full bg-gray-100"
@@ -57,12 +57,12 @@ export default function Comment({ data, refreshComments }) {
                 <div>
                     <button
                         onClick={() => { setShowEditForm(false) }}
-                        className="text-white hover:bg-gray-800 font-bold py-2 px-4 bg-gray-700 rounded cursor-pointer mr-2">
+                        className="text-yellow-300 hover:bg-blue-950 font-bold py-2 px-4 bg-blue-700 rounded cursor-pointer mr-2">
                         Close
                     </button>
                     <button
                         type="submit"
-                        className="text-white hover:bg-green-800 font-bold py-2 px-4 bg-green-900 rounded cursor-pointer mr-2">
+                        className="text-white hover:bg-cyan-700 font-bold py-2 px-4 bg-cyan-900 rounded cursor-pointer mr-2">
                         Post
                     </button>
                 </div>
@@ -73,7 +73,7 @@ export default function Comment({ data, refreshComments }) {
     } else {
         return (
             <div
-                className="bg-gray-100 rounded-lg p-4 my-4 border-gray-700 border-2 w-[80vw] mx-auto">
+                className="bg-gray-100 rounded-lg p-4 my-4 border-gray-700  w-[80vw] mx-auto">
                 <p className="font-bold">{data.name}</p>
                 <p className="my-2">{data.content}</p>
                 <div className="flex justify-end">

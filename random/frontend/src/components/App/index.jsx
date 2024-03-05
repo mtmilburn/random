@@ -43,20 +43,20 @@ export default function App() {
   // Constionally render the login/singup links and the logout button
   let authLink = <div className="flex lg:gap-5 md:gap-4 sm:gap-3 gap-2">
   <Link to="/auth/signup">
-      <h2 className="text-white md:text-lg sm:text-md">Sign Up</h2>
+      <h2 className="text-yellow-300 md:text-lg sm:text-md">Sign Up</h2>
   </Link>
   <Link to="/auth/login">
-      <h2 className="text-white md:text-lg sm:text-md">Log In</h2>
+      <h2 className="text-yellow-300 md:text-lg sm:text-md">Log In</h2>
   </Link>
 </div>
 
 if (loginStatus) {
   authLink = <div className="flex lg:gap-5 md:gap-4 sm:gap-3 gap-2">
   <Link to="/favorites">
-      <h2 className="text-white md:text-lg sm:text-md">Favorites</h2>
+      <h2 className="text-yellow-300 md:text-lg sm:text-md">Fav😮rites</h2>
   </Link>
   <button
-      className="text-white md:text-lg sm:text-md"
+      className="text-yellow-300 md:text-lg sm:text-md"
       onClick={() => {
           localStorage.clear()
           setLoginStatus(false)

@@ -22,10 +22,10 @@ export default function FavoritesPage({favFacts, setFavFacts, loginStatus, updat
         )
     }else {
         return (
-            <main className="w-4/5 mt-5 mx-auto xl:columns-4 lg:columns-3 md:columns-2">
+            <main className="w-4/5 mt-5 mx-auto xl:columns-1 lg:columns-1 md:columns-1">
                 {favFacts.map(fact => <Card
                     key={fact.factId}
-                    fact={{ ...fact, id: fact.factId }}
+                    fact={{ ...fact, id: fact.factId, fact:fact.factId }}
                     updateDetails={updateDetails}
                     favFacts={favFacts}
                     setFavFacts={setFavFacts}
