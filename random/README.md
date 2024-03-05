@@ -6,6 +6,21 @@ As a user I would like to be able to 'save' or 'favorite' my favorite facts.
 As a user I would like to leave a comment on any fact.
 As a user I would like to have a log in or account.
 
+### :camera_flash: Screenshots 
+
+  |   Description | Screenshot | 
+  |:-------------:| -----------|
+  | <h3>Home Page</h3> | <img src="https://i.imgur.com/S7usvZQ.png" width="700"> |
+  | <h3>Favorites Page</h3> | <img src="https://i.imgur.com/W9C4ool.png" width="700"> |
+  | <h3>Details Page</h3> | <img src="https://i.imgur.com/eG9HPq1.png" width="700"> |
+  | <h3>Sign up</h3> | <img src="https://i.imgur.com/fCcLd0M.png" width="700"> |
+  | <h3>Log in</h3> | <img src="https://i.imgur.com/SahQLbK.png" width="700"> |
+  
+### Unsolved Problems
+
+None at the moment
+
+
 ### Next Steps
 I'm going to incorporate multiple API's.
 
@@ -28,3 +43,17 @@ Lastly I will most likely install a search feature for the content of the materi
 ![Nodemon](https://img.shields.io/badge/NODEMON-%23323330.svg?style=for-the-badge&logo=nodemon&logoColor=%BBDEAD)
 ![JWT](https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=JSON%20web%20tokens)
 ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+
+### Wireframes
+
+![Home Page](https://i.imgur.com/VEpz2Nf.png)
+
+![Sign-in Page](https://i.imgur.com/YUbfHnL.png)
+
+![Log in](https://i.imgur.com/98tFzev.png)
+
+![Details Page](https://i.imgur.com/98tFzev.png)
+
+### Routing Table
+
+### Installation Instructions
